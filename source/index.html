@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preload" href="fonts/MontserratRegular.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">  
+  <title>QWK.</title>
+</head>
+<body>
+	<div style="display: none;">
+    	<include src="build/img/icons/sprite.svg"></include>
+  	</div>
+	<div class="page-wrapper">	
+		<header class="page-header menu">
+			<div class="menu__trigger">
+				<button class="btn-trigger">
+					<svg height="30" width="26" viewBox="0 -53 384 384">
+						<use xlink:href="#icon-menu"></use>
+					</svg>
+					<span class="visually-hidden">
+						Открыть меню навигации
+					</span>
+				</button>
+			</div>	
+			<div class="menu__logo">
+				<a class="logo-icon">					 	
+					<img src="img/icons/logo.svg" width="69" height="30" alt="Логотип шоурума">
+					<span class="visually-hidden">Логотип шоурума</span>
+				</a>
+			</div>				
+			<div class="menu__overlay"></div>
+			<nav class="menu__nav" role="navigation" aria-label="Меню навигации хедера">
+				<div class="menu__primary">							
+					<div class="menu__trigger-close">
+						<button class="btn-trigger">
+							<svg width="20" height="20" viewBox="0 0 512.001 512.001">
+								<use xlink:href="#icon-close"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="menu__mobile-search">
+						<form class="menu__search-form" action="#" method="POST">
+							<div class="menu__input-field">
+								<input id="search-input-field-mobile" name="search" autocomplete="off" autocapitalize="off" maxlength="30" minlength="1" type="text" placeholder="Искать">
+								<label for="search-input-field-mobile"></label>
+								<button class="input-field-action-button" type="submit">
+									<svg class="nav-icon" width="25" height="25" viewBox="0 0 451 451">
+										<use xlink:href="#icon-search"></use>
+									</svg>
+								</button>
+							</div>
+						</form>
+					</div>
+					<div class="menu__primary-links">
+						<ul>
+							<li class="sub-menu"><a href="#">Мужчины
+									<span class="toggle-icon" aria-hidden="true"></span>
+								</a>
+								<ul>
+									<li><a href="test.html">Толстовки и свитшоты</a></li>
+									<li><a href="test.html">Джинсы</a></li>
+									<li><a href="test.html">Аксессуары</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Женщины</a></li>
+							<li><a href="#">Избранное</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+				</div>		
+				<div class="menu__nav-icons">
+					<ul>
+						<li>
+							<a href="#" aria-label="Поиск">
+								<svg class="nav-icon" width="25" height="25" viewBox="0 0 451 451">
+									<use xlink:href="#icon-search"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" aria-label="Войти">
+								<svg class="nav-icon" width="25" height="25" viewBox="0 0 482.9 482.9">
+									<use xlink:href="#icon-avatar"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" aria-label="Избранное">
+								<svg class="nav-icon" width="25" height="25" viewBox="0 -28 512.001 512">
+									<use xlink:href="#icon-heart"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" aria-label="Корзина покупок">
+								<svg class="nav-icon" width="25" height="25" viewBox="0 0 489 489">
+									<use xlink:href="#icon-shopping-bag"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>				
+		</header>
+		<main>
+			<h1 class="visually-hidden">Шоурум бренда одежды QWK.</h1>
+
+			<!-- Main screen -->
+			<section class="hero">
+				<div class="hero__img">
+					<div class="hero__title">
+						<h2>встречай</h2>
+						<h2>весну</h2>
+					</div>					
+					<div class="hero__buttons">
+						<a href="#">Мужчины</a>
+						<a href="#">Женщины</a>
+					</div>
+				</div>
+			</section>			
+
+			<!-- Content -->
+			<section class="content-area">
+				<div class="grid-wrapper">
+					<div class="bg-row-top"></div>
+					<div class="item-img collection">
+						<img src="img/content/new-collection.png" alt="Новая коллекция" width="700" height="700">					
+					</div>
+					<div class="collection-text">
+						<div class="text-inner-wrapper">
+							<h3>Новая коллекция</h3>
+							<h4>Весна/Лето 2020</h4>
+							<p>В этом сезоне мы сделали акцент
+								на классические свитшоты
+								с тематикой 90-х
+							</p>
+						</div>
+						<div class="btn-link">
+							<a href="#">Перейти в каталог</a>
+						</div>
+					</div>
+					<div class="item-img co-op">
+						<img src="img/content/colaboration.png" width="700" height="700" alt="Коллаборация с дизайнером">
+					</div>					
+					<div class="co-op-text">
+						<div class="text-inner-wrapper item-center">
+							<h3>Sasha Frank</h3>
+							<p>Эксклюзивная лимитированная коллекция кроссовок Dream On, разработанная совместно с модным
+								питерским дизайнером
+							</p>
+						</div>
+						<div class="co-op-link">
+							<a href="#">Смотреть коллекцию</a>
+						</div>	
+					</div>
+					<div class="item-img info">
+						<img src="img/content/about us.png" width="700" height="700" alt="О нас">
+					</div>
+					<div class="info-text">
+						<div class="text-inner-wrapper">
+							<h3>О нас</h3>
+							<p>Наша философия очень проста &#8212; мы
+								не воспринимаем моду и жизнь слишком серьезно. Но мы стремимся отражать индивидуальность
+								в одежде и быть открытыми всему новому
+							</p>
+						</div>						
+						<div class="btn-link">
+							<a href="#">Смотреть информацию</a>
+						</div>
+					</div>
+					<div class="bg-row-bottom"></div>
+				</div>
+			</section>
+
+			<!-- Subscribe -->
+			<section class="subscribe">
+				<form class="subscribe-form" action="#" method="post">
+					<div class="subscribe__wrapper">
+						<h2>Присоединяйся к нам</h2>
+						<p>Подпишись на рассылку новостей, чтобы быть
+							в курсе последних поступлений и событий
+							и получи скидку 10%
+						</p>
+					</div>
+					<div class="suscribe-input">
+						<input type="email" name="email" placeholder="email" required="" autocomplete="off" autocapitalize="off">
+					</div>					
+					<button class="subscribe-button" type="submit" value="subscribe"  title="subscribe">Подписаться</button>					
+				</form>			
+			</section>
+
+			<!-- Footer -->
+			<footer class="page-footer">
+				<div class="page-footer__wrapper">
+					<div class="page-footer__inner">
+						<div class="page-footer__social col col-1">
+							<a class="page-footer__logo">
+								<img src="img/icons/logo.svg" alt="Логотип шоурума">
+							</a>
+							<div class="page-footer__info-content">
+								<p>Санкт-Петербург, Невский пр-т, д. 91
+									<br>
+									Открыты ежедневно с 12-22 часов
+								</p>
+								<a href="tel:+78129117325">
+									<span>+7 (812) 911 73 25</span>
+								</a>
+								<a href="mailto:shop@QWK.ru">
+									<span>shop@QWK.ru</span>
+								</a>
+							</div>
+
+							<div class="page-footer__social-links">
+								<p><span class="visually-hidden">Мы в соц сетях</span></p>
+								<ul>
+									<li>
+										<a class="icon" href="">
+											<svg class="social-icon" width="20" height="20" viewBox="0 0 512 512">
+												<use xlink:href="#icon-instagram"></use>
+											</svg>
+										</a>
+										<span class="visually-hidden">Наш Инстаграм</span>
+									</li>
+									<li>
+										<a class="icon icon-twitter" href="#">
+											<svg class="social-icon" width="20" height="20"	viewBox="0 0 512 512">
+												<use xlink:href="#icon-twitter"></use>
+											</svg>
+										</a>
+										<span class="visually-hidden">Наш Твиттер</span>
+									</li>
+									<li>
+										<a class="icon icon-facebook" href="#">
+											<svg class="social-icon" width="20" height="20" viewBox="0 0 512 512">
+												<use xlink:href="#icon-facebook"></use>
+											</svg>
+										</a>
+										<span class="visually-hidden">Наш Фейсбук</span>
+									</li>
+									<li>
+										<a class="icon icon-whatsapp" href="#">
+											<svg class="social-icon" width="20" height="20" viewBox="0 0 24 24">
+												<use xlink:href="#icon-whatsapp"></use>
+											</svg>
+										</a>
+										<span class="visually-hidden">Наш Ватсап</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="page-footer__about-block col col-2" role="navigation" aria-label="Меню навигации футера">
+							<div class="page-footer__block-header  js-toggle-button  closed">
+								<h3 class="page-footer__title">О проекте</h3>						
+								<button class="visually-hidden"></button>
+							</div>							
+							<div class="page-footer__group js-toggle-group closed">
+								<ul>
+									<li><a href="#">Новости</a></li>
+									<li><a href="#">Вакансии</a></li>
+									<li><a href="#">Контакты</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="page-footer__service-block col col-3" role="navigation" aria-label="Меню навигации футера">
+							<div class="page-footer__block-header js-toggle-button closed">
+								<h3 class="page-footer__title">Помощь покупателю</h3>
+								<button class="visually-hidden"></button>
+							</div>
+							<div class="page-footer__group js-toggle-group closed">
+								<ul>
+									<li><a href="#">Оплата и доставка</a></li>
+									<li><a href="#">Обмен и возврат</a></li>
+									<li><a href="#">Программа лояльности</a></li>
+								</ul>
+							</div>
+							<div class="page-footer__pay-links">
+								<p>Мы принимаем</p>
+								<ul>
+									<li>
+										<a class="icon-pay-links" href="#">
+											<img src="img/icons/mts-bank.png" width="48" height="32" alt="Карта МТС Банк">
+										</a>
+										<span class="visually-hidden">МТС Банк</span>
+									</li>
+									<li>
+										<a class="icon-pay-links" href="#">
+											<img src="img/icons/maestro.png" width="48" height="32" alt="Карта Маэстро">
+										</a>
+										<span class="visually-hidden">Маэстро</span>
+									</li>
+									<li>
+										<a class="icon-pay-links" href="#">
+											<img src="img/icons/mastercard.png" width="48" height="32" alt="Карта Мастер Кард">
+										</a>
+										<span class="visually-hidden">Мастер Кард</span>
+									</li>
+									<li>
+										<a class="icon-pay-links" href="#">
+											<img src="img/icons/visa.png" width="48" height="32" alt="Карта Виза">
+										</a>
+										<span class="visually-hidden">Виза</span>
+									</li>
+									<li>
+										<a class="icon-pay-links" href="#">
+											<img src="img/icons/paypal.png" width="48" height="32" alt="Карта Пейпал">
+										</a>
+										<span class="visually-hidden">Пейпал</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>				
+			</footer>				
+		</main>
+	</div>	
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="jquery/header.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

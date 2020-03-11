@@ -1,0 +1,33 @@
+.page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: transparent;
+        padding: 0 1.5em;        
+        color: $brown; 
+        z-index: 10;  
+}
+
+@media screen and (max-width: 804px) {     
+        .page-header {
+                position: fixed;
+                display: flex;
+                align-items: center;
+                height: 60px;
+                z-index: 20;
+                background-color: #CBBFC6;
+                box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.1);
+        }        
+}
+
+@media screen and (max-width: 400px) {
+        .page-header {
+                padding: 0 15px;
+                box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.1);
+        }
+}

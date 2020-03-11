@@ -1,0 +1,105 @@
+.subscribe-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 5em auto;
+        max-width: 500px;
+
+        input[type=email] {
+                background-color: inherit;
+                border-bottom: 1px solid $brown;
+                border-top: 0;
+                border-left: 0;
+                border-right: 0;
+                width: 80%;
+
+                &::placeholder {
+                        font-size: 14px;
+                        text-align: center;
+                }
+
+                &:focus {
+                        border-bottom: 2px solid $base-layer;
+                }
+        }
+}
+
+.subscribe__wrapper {
+        padding: 0 20px;
+        margin-bottom: 0.7em;
+
+        h2 {
+                font-size: 1.2em;
+                font-weight: 500;
+                margin-bottom: 1em;
+        }
+
+        p {
+                font-size: .91rem;
+                padding-bottom: 1em;
+                line-height: 182.9%;
+        }
+}
+
+.subscribe-button {
+        display: block;
+        margin: 2.5em auto 0;
+        font-size: 1.1rem;
+        font-weight: 500 ;
+        padding: .65em 3em;
+        border: 1.5px solid $brown;
+        background: transparent;
+        outline: 2px solid transparent;
+        color: $brown;
+        transition: all 0.3s ease 0s;
+        
+        &:active {
+               color: $bg-color;
+                background: $hover;
+                border-color: $hover;                
+        }
+}
+
+@media screen and (min-width: 767px) {
+        .subscribe-button {
+                padding: .6em 3em;
+                cursor: pointer;
+
+                &:hover,
+                &:focus {
+                        color: $bg-color;
+                        background-color: $hover;
+                        border-color: $hover;
+                        transition: all 0.3s ease-out;
+                }
+
+                &:active {
+                        color: $bg-color;
+                        background: $hover;
+                        border-color: $hover;
+                        outline: 2px solid rgba($color: #ffffff, $alpha: 0.9);
+                        outline-offset: 4px;
+                }
+        }
+}
+
+@media screen and (min-width: 1047px) {
+        .subscribe-form {
+                input[type=email] {
+                        font-size: .71em;
+                }
+        }
+
+        .subscribe__wrapper {
+                padding: 0;
+
+                h2 {
+                        font-size: 1.1em;
+                }
+
+                p {
+                        font-size: .92rem;
+                }
+        }
+}
