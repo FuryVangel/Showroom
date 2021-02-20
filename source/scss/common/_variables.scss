@@ -1,0 +1,18 @@
+$montserrat: "Montserrat", "Arial", sans-serif;
+$politicaLight: "PoliticaLight", "Arial", sans-serif;
+$ralewayRegular: "RalewayRegular", "Arial", sans-serif;
+
+$stop-scaling: 2000px;
+
+$tablet: 1024px;
+$mobile: 768px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+@keyframes item-fade-in {
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
