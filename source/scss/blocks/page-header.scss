@@ -1,33 +1,317 @@
 .page-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100px;
-        background: transparent;
-        padding: 0 1.5em;        
-        color: $brown; 
-        z-index: 10;  
-}
+ position: absolute;
+ top: 0;
+ z-index: 10;
+ width: 100%;
 
-@media screen and (max-width: 804px) {     
-        .page-header {
-                position: fixed;
-                display: flex;
-                align-items: center;
-                height: 60px;
-                z-index: 20;
-                background-color: #CBBFC6;
-                box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.1);
-        }        
-}
+ &__nav {
+   @include flex_s-between;
+   align-items: center;
+   width: 100%;
+   min-height: 100px;
+   background: transparent;
+   color: var(--color-primary);
+   @include tablet {
+     justify-content: flex-start;
+     position: fixed;
+     top: 0;
+     left: 0;
+     align-items: center;
+     min-height: 60px;
+     background-color: var(--color-base-layer);
+     box-shadow: 0 2px 4px var(--lightShadow);
+   }
+ }
 
-@media screen and (max-width: 400px) {
-        .page-header {
-                padding: 0 15px;
-                box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.1);
-        }
+ &__row {
+   display: none;
+   @include tablet {
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+     padding: 0.8em 1em;
+     width: 100%;
+     height: 60px;
+   }
+ }
+
+ &__btn {
+   @include btn-reset;
+   display: none;
+
+   @include tablet {
+     display: flex;
+
+     &--trigger {
+       width: 28px;
+       height: 20px;
+       position: relative;
+       z-index: 3;
+
+       span {
+         position: relative;
+         display: block;
+         width: 100%;
+         height: 2.5px;
+         background-color: var(--color-primary);
+         transition: var(--transition);
+         backface-visibility: hidden;
+         border-radius: 9px;
+         &::before,
+         &::after {
+           content: "";
+           position: absolute;
+           left: 0;
+           top: 9px;
+           width: 100%;
+           height: 2.5px;
+           background-color: var(--color-primary);
+           transition: var(--transition);
+           backface-visibility: hidden;
+           border-radius: 9px;
+         }
+
+         &::after {
+           top: 18px;
+         }
+
+         &:active {
+           background-color: var(--color-orange);
+           &:before,
+           &:after {
+             background-color: var(--color-orange);
+           }
+         }
+       }
+     }
+
+     &--close {
+       @include flex_center;
+       width: 20px;
+       height: 20px;
+     }
+   }
+ }
+
+ &__logo {
+   display: flex;
+   position: relative;
+   user-select: none;
+
+   @include tablet {
+     margin-left: 20px;
+   }
+ }
+
+ &__menu {
+   display: flex;
+
+   @include tablet {
+     flex-grow: 1;
+   }
+ }
+
+ &__group {
+   display: flex;
+   @include tablet {
+     --transition: 0.5s ease-in-out;
+     flex-direction: column;
+     position: fixed;
+     width: 85vw;
+     height: 100vh;
+     font-family: $montserrat;
+     background: var(--color-background);
+     top: 0;
+     left: 0;
+     box-shadow: 0 0 0 0 var(--shadow);
+     transform: translateX(-90vw);
+     transition: transform var(--transition);
+     z-index: 11;
+     overflow-y: scroll;
+
+     &.active {
+       transform: translateX(0);
+       box-shadow: -4px 0 12px 6px var(--shadow);
+
+       + .overlay {
+         display: block;
+         opacity: 0.9;
+       }
+
+       .page-header__links ul > li {
+         animation: item-fade-in 0.8s ease-in-out;
+         animation-fill-mode: forwards;
+
+         @for $i from 1 through 4 {
+           &:nth-child(#{$i}) {
+             animation-delay: 0.04s * $i;
+           }
+         }
+       }
+     }
+   }
+ }
+
+ &__form {
+   display: none;
+
+   @include tablet {
+     display: block;
+     position: relative;
+
+     div {
+       position: relative;
+
+       input {
+         width: 100%;
+         height: 60px;
+         padding: 1em 2.5em 1em 1em;
+         font-family: inherit;
+         font-size: 100%;
+         border: 1px solid var(--color-base-layer);
+         box-shadow: 0 2px 4px transparent;
+         background: var(--color-secondary);
+
+         &:focus {
+           box-shadow: 0 2px 4px var(--lightShadow);
+           border-radius: 0;
+           -webkit-border-radius: 0;
+         }
+
+         &::-webkit-input-placeholder {
+           font-size: 0.9em;
+           color: var(--color-placeholder);
+         }
+
+         &:placeholder-shown {
+           font-size: 0.9em;
+           color: var(--color-placeholder);
+         }
+       }
+
+       button {
+         @include btn-reset;
+         position: absolute;
+         width: 25px;
+         height: 25px;
+         top: 1.1em;
+         right: 0.7em;
+       }
+     }
+   }
+ }
+
+ &__icons {
+   display: flex;
+   align-items: center;
+
+   ul {
+     @include list-reset;
+     display: flex;
+
+     li:not(:last-child) {
+       margin-right: 15px;
+     }
+
+     a {
+       display: flex;
+     }
+   }
+
+   @include tablet {
+     margin-left: auto;
+   }
+ }
+
+ &__links {
+   > ul {
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+     @include tablet {
+       flex-direction: column;
+     }
+
+     > li {
+       display: flex;
+       margin-right: 20px;
+       @include tablet {
+         --transition: 0.25s ease-in-out;
+         flex-direction: column;
+         justify-content: center;
+         width: 100%;
+         min-height: 60px;
+         margin-right: 0;
+         padding: 0.8em 1em;
+         box-shadow: 0 2px 4px transparent;
+         opacity: 0;
+         transform: translateX(-30px);
+         transition: all var(--transition);
+
+         &:hover {
+           z-index: 5;
+           background-color: var(--color-crystalBell);
+           box-shadow: 0 2px 4px var(--lightShadow);
+         }
+       }
+
+       > a {
+         font-size: 1rem;
+         @include tablet {
+           padding: 0;
+         }
+       }
+     }
+   }
+
+   ul {
+     @include list-reset;
+
+     li {
+       position: relative;
+       @include tablet {
+         &.active {
+           > a {
+             margin-bottom: 0.6em;
+           }
+           ul {
+             display: block;
+             position: relative;
+             width: 100%;
+             top: 0;
+             background: var(--color-secondary);
+           }
+         }
+       }
+
+       ul {
+         @include list-reset;
+         @include flex_column;
+         width: 215px;
+         position: absolute;
+         top: 100%;
+         left: 0;
+         display: none;
+         background: var(--color-secondary);
+         opacity: 0.9;
+         padding: 0.3em;
+
+         li {
+           display: flex;
+           align-items: center;
+           padding: 0.2em;
+
+           @include tablet {
+             flex-direction: column;
+             align-items: flex-start;
+           }
+
+           a {
+             font-size: .9rem;
+           }
+         }
+       }
+     }
+   }
+ }
 }

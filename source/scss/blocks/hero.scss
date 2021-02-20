@@ -1,142 +1,148 @@
 .hero {
-        position: relative;
-        
-        &__img {
-                background-image: url(../img/content/hero.png);
-                background-color: $base-layer;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                height: 100vh;           
-                overflow-y: hidden;
-        }
+ @include flex_center;
+ position: relative;
+ width: 100%;
+ height: 100vh;
+ background-image: url("../img/content/hero@1x.png");
+ //background-image: -webkit-image-set(url('../img/content/hero@1x.webp') 1x);
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ background-color: #DCE2F2;
 
-        &__title {
-                display: flex;
-                flex-direction: column;
-                align-items: center; 
-                margin-top: 4em;
-                
-                h2 {
-                        font-family: PoliticaLight;
-                        font-size: 4em;
-                        font-weight: 300;
-                        text-shadow: 3px 2px 0 #AA4444;
-                        color: $brown;
-                        letter-spacing: 0.10em;                        
-                }
-        }
-                
-        &__buttons {
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                align-items: center;
-                position: absolute;
-                bottom: 0;
-                margin: 0 auto 50px;
-                left: 1em;
-                right: 1em;
-                text-align: center;
+ @include retina {
+   background-image: url("../img/content/hero@2x.png");
+   //background-image: -webkit-image-set(url('../img/content/hero@2x.webp') 2x);
+ }
 
-                a {
-                        display: flex;
-                        justify-content: center;
-                        padding: 10px;
-                        align-items: center;
-                        font-size: 1rem;
-                        flex-basis: calc(50% - 10px);
-                        color: $white;                     
-                        border: 1px solid $white;     
-                        background: rgba(196, 196, 196, 0.13);
-                        max-width: 330px;
-                        outline: 2px solid transparent;
-                        transition: all 0.3s ease 0s;
+ &__container {
+   display: flex;
+   align-items: center;
+   align-self: flex-end;
+   justify-content: center;
+   height: calc(100vh - 100px);
 
-                        &:active {
-                                background: $hover;
-                                text-decoration: none;
-                                border-color: $hover;
-                                opacity: 1;
-                        }
-                }
-        }
+   @include mobilePortrait {
+     height: calc(100vh - 60px);
+   }
+
+   @include mobileLandscape {
+     height: calc(100vh - 60px);
+   }
+
+   @include tabletLandscape {
+     height: calc(100vh - 60px);
+   }
+ }
+
+ &__content {
+   @include flex_column;
+   justify-content: space-between;
+   align-items: center;
+   align-self: flex-end;
+   max-width: 1000px;
+   width: 100%;
+   height: 100%;
+   @include stopScaling {
+     max-width: 100%;
+   }
+ }
+
+ &__title {
+   @include flex_center;
+   padding: 1em 0.3em;
+   width: 100%;
+
+   @include tablet {
+     padding: 2em;
+   }
+
+   @include tabletLandscape {
+     padding: 1em;
+   }
+
+   @include mobile {
+     padding: 1.3em 0.3em;
+   }
+
+   @include stopScaling {
+     padding: 5em 0;
+   }
+
+   h2 {
+     @include list-reset;
+     @include flex_s-between;
+     align-items: center;
+     flex-wrap: wrap;
+     width: 100%;
+     font-family: $politicaLight;
+     font-size: 3.2em;
+     font-weight: 300;
+     text-shadow: 3px 2px 0 var(--color-redtail);
+     color: var(--color-primary);
+     letter-spacing: 0.10em;
+
+     @include tablet {
+       font-size: 4em;
+     }
+
+     @include tabletLandscape {
+       justify-content: space-around;
+     }
+
+     @include mobile {
+       font-size: 3.2em;
+       text-shadow: 2px 1px 0 var(--color-redtail);
+     }
+
+     @include mobileLandscape {
+       justify-content: space-between;
+     }
+
+     @media (max-width: 540px) and (orientation: portrait) {
+       flex-direction: column;
+       justify-content: center;
+     }
+
+     @include stopScaling {
+       text-shadow: 6px 4px 0 var(--color-redtail);
+     }
+   }
+ }
+
+ &__buttons {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   align-items: center;
+   margin-bottom: 3em;
+   width: 100%;
+
+   @include mobilePortrait {
+     justify-content: space-between;
+   }
+
+   @include mobileLandscape {
+     justify-content: space-between;
+     margin-bottom: 2em;
+   }
+
+   @include tabletLandscape {
+     margin-bottom: 1.5em;
+   }
+ }
+
+ &__btn {
+   font-family: $ralewayRegular;
+   font-weight: 400;
+   background-color: rgba(196, 196, 196, 0.13);
+
+   @include mobilePortrait {
+     flex-basis: calc(50% - 10px);
+   }
+
+   @include mobileLandscape {
+     flex-basis: calc(50% - 30px);
+   }
+ }
 }
-
-@media screen and (min-width: 28.75em) {
-        .hero__title {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                position: absolute;
-                width: 100%;
-                top: 22%;
-                margin: 0;
-
-                h2 {
-                        font-size: 3.5em;
-                }
-        }
-}
-
-@media screen and (min-width: 38.75em) {
-        .hero__title  h2 {
-                font-size: 3.7em;
-                text-shadow: 4px 3px 0 #AA4444;
-        }
-}
-
-@media screen and (min-width: 768px) {
-        .hero__buttons {
-                max-width: 950px;
-                // margin: 0 auto 50px;
-
-                a {
-                        padding: 12px 0;
-                        flex-basis: calc(50% - 30px);
-
-                        &:hover,
-                        &:focus {
-                                color: $bg-color;
-                                background: $hover;
-                                border-color: $hover;
-                        }
-
-                        &:active {
-                                background: $hover;
-                                border-color: $hover;
-                                outline-offset: 3px;
-                                color: $bg-color;
-                                outline: 1.5px solid $bg-color;
-                        }
-                }
-        }
-}
-
-@media screen and (min-width: 50em) {
-        .hero__title h2 {
-                font-size: 3.9em;
-        }
-}
-
-@media screen and (min-width: 79.37em){
-        // .hero__img {
-        //         min-height: 800px;
-        // }
-
-        .hero__title h2 {
-                text-shadow: 5px 4px 0 #AA4444;
-        }
-}
-
-@media screen and (min-width: 85em) {
-        // .hero__buttons {
-        //         margin: 0 auto 100px;
-        // }
-}
-
-// @media screen and (min-width: 118.75em) {
-//         .hero__title {
-//                 top: 9%;
-//         }
-// }

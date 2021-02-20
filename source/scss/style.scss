@@ -1,11 +1,13 @@
 @import "normalize";
-@import "fonts";
-@import "settings";
-
+@import "common/variables";
+@import "common/mixins/mixins";
+@import "common/mixins/media";
+@import "common/fonts";
+@import "common/settings";
 @import "blocks/page-header";
-@import "blocks/menu";
+@import "blocks/sub-menu";
 @import "blocks/hero";
-@import "blocks/content-area";
+@import "blocks/primary-content";
+@import "blocks/grid";
 @import "blocks/subscribe";
 @import "blocks/page-footer";
-
