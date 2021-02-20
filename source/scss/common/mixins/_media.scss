@@ -1,0 +1,51 @@
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin tabletPortrait {
+  @media (max-width: $tablet) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin tabletLandscape {
+  @media (max-width: $tablet) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mobilePortrait {
+  @media (max-width: $mobile) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin mobileLandscape {
+  @media (max-width: $mobile) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin stopScaling {
+  @media (min-width: $stop-scaling) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+
+
+
