@@ -1,148 +1,149 @@
 .hero {
- @include flex_center;
- position: relative;
- width: 100%;
- height: 100vh;
- background-image: url("../img/content/hero@1x.png");
- //background-image: -webkit-image-set(url('../img/content/hero@1x.webp') 1x);
- background-repeat: no-repeat;
- background-position: center;
- background-size: cover;
- background-color: #DCE2F2;
+  @include flex_center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/content/hero@1x.png");
+  //background-image: -webkit-image-set(url('../img/content/hero@1x.webp') 1x);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #DCE2F2;
 
- @include retina {
-   background-image: url("../img/content/hero@2x.png");
-   //background-image: -webkit-image-set(url('../img/content/hero@2x.webp') 2x);
- }
+  @include retina {
+    background-image: url("../img/content/hero@2x.png");
+    //background-image: -webkit-image-set(url('../img/content/hero@2x.webp') 2x);
+  }
 
- &__container {
-   display: flex;
-   align-items: center;
-   align-self: flex-end;
-   justify-content: center;
-   height: calc(100vh - 100px);
+  &__container {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    justify-content: center;
+    height: calc(100vh - 100px);
 
-   @include mobilePortrait {
-     height: calc(100vh - 60px);
-   }
+    @include mobilePortrait {
+      height: calc(100vh - 60px);
+    }
 
-   @include mobileLandscape {
-     height: calc(100vh - 60px);
-   }
+    @include mobileLandscape {
+      height: calc(100vh - 60px);
+    }
 
-   @include tabletLandscape {
-     height: calc(100vh - 60px);
-   }
- }
+    @include tabletLandscape {
+      height: calc(100vh - 60px);
+    }
+  }
 
- &__content {
-   @include flex_column;
-   justify-content: space-between;
-   align-items: center;
-   align-self: flex-end;
-   max-width: 1000px;
-   width: 100%;
-   height: 100%;
-   @include stopScaling {
-     max-width: 100%;
-   }
- }
+  &__content {
+    @include flex_column;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-end;
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
 
- &__title {
-   @include flex_center;
-   padding: 1em 0.3em;
-   width: 100%;
+    @include stopScaling {
+      max-width: 100%;
+    }
+  }
 
-   @include tablet {
-     padding: 2em;
-   }
+  &__title {
+    @include flex_center;
+    padding: 1em 0.3em;
+    width: 100%;
 
-   @include tabletLandscape {
-     padding: 1em;
-   }
+    @include tablet {
+      padding: 2em;
+    }
 
-   @include mobile {
-     padding: 1.3em 0.3em;
-   }
+    @include tabletLandscape {
+      padding: 1em;
+    }
 
-   @include stopScaling {
-     padding: 5em 0;
-   }
+    @include mobile {
+      padding: 1.3em 0.3em;
+    }
 
-   h2 {
-     @include list-reset;
-     @include flex_s-between;
-     align-items: center;
-     flex-wrap: wrap;
-     width: 100%;
-     font-family: $politicaLight;
-     font-size: 3.2em;
-     font-weight: 300;
-     text-shadow: 3px 2px 0 var(--color-redtail);
-     color: var(--color-primary);
-     letter-spacing: 0.10em;
+    @include stopScaling {
+      padding: 5em 0;
+    }
 
-     @include tablet {
-       font-size: 4em;
-     }
+    h2 {
+      @include list-reset;
+      @include flex_s-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      font-family: $politica;
+      font-size: 3.2em;
+      font-weight: 300;
+      text-shadow: 3px 2px 0 var(--color-redtail);
+      color: var(--color-primary);
+      letter-spacing: 0.10em;
 
-     @include tabletLandscape {
-       justify-content: space-around;
-     }
+      @include tablet {
+        font-size: 4em;
+      }
 
-     @include mobile {
-       font-size: 3.2em;
-       text-shadow: 2px 1px 0 var(--color-redtail);
-     }
+      @include tabletLandscape {
+        justify-content: space-around;
+      }
 
-     @include mobileLandscape {
-       justify-content: space-between;
-     }
+      @include mobile {
+        font-size: 3.2em;
+        text-shadow: 2px 1px 0 var(--color-redtail);
+      }
 
-     @media (max-width: 540px) and (orientation: portrait) {
-       flex-direction: column;
-       justify-content: center;
-     }
+      @include mobileLandscape {
+        justify-content: space-between;
+      }
 
-     @include stopScaling {
-       text-shadow: 6px 4px 0 var(--color-redtail);
-     }
-   }
- }
+      @media (max-width: 540px) and (orientation: portrait) {
+        flex-direction: column;
+        justify-content: center;
+      }
 
- &__buttons {
-   display: flex;
-   justify-content: space-around;
-   flex-wrap: wrap;
-   align-items: center;
-   margin-bottom: 3em;
-   width: 100%;
+      @include stopScaling {
+        text-shadow: 6px 4px 0 var(--color-redtail);
+      }
+    }
+  }
 
-   @include mobilePortrait {
-     justify-content: space-between;
-   }
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 3em;
+    width: 100%;
 
-   @include mobileLandscape {
-     justify-content: space-between;
-     margin-bottom: 2em;
-   }
+    @include mobilePortrait {
+      justify-content: space-between;
+    }
 
-   @include tabletLandscape {
-     margin-bottom: 1.5em;
-   }
- }
+    @include mobileLandscape {
+      justify-content: space-between;
+      margin-bottom: 2em;
+    }
 
- &__btn {
-   font-family: $ralewayRegular;
-   font-weight: 400;
-   background-color: rgba(196, 196, 196, 0.13);
+    @include tabletLandscape {
+      margin-bottom: 1.5em;
+    }
+  }
 
-   @include mobilePortrait {
-     flex-basis: calc(50% - 10px);
-   }
+  &__btn {
+    font-family: $raleway;
+    font-weight: 400;
+    background-color: rgba(196, 196, 196, 0.13);
 
-   @include mobileLandscape {
-     flex-basis: calc(50% - 30px);
-   }
- }
+    @include mobilePortrait {
+      flex-basis: calc(50% - 10px);
+    }
+
+    @include mobileLandscape {
+      flex-basis: calc(50% - 30px);
+    }
+  }
 }
