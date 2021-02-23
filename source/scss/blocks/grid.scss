@@ -193,7 +193,7 @@
         padding: 1em 0;
       }
 
-      h3, h4, p {
+      h2, h3, p {
         @include list-reset;
         font-family: $montserrat;
         color: var(--color-primary);
@@ -204,7 +204,7 @@
         }
       }
 
-      h3 {
+      h2 {
         font-size: 2rem;
         padding-bottom: 0.2em;
 
@@ -218,7 +218,7 @@
         }
       }
 
-      h4 {
+      h3 {
         font-size: 1.5rem;
         font-weight: 400;
 
@@ -263,7 +263,7 @@
           @include flex_column;
           justify-content: center;
 
-          h3 {
+          h2 {
             position: relative;
             top: 0;
             left: 0;
