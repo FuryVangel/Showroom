@@ -106,14 +106,13 @@
     position: relative;
 
     div {
-      height: calc(100vh - 4em);
+      height: 100%;
 
       @include mobile {
         height: 75vh;
       }
 
       img {
-        @include center;
         @include fit-img;
       }
     }

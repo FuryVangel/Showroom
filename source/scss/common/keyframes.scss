@@ -1,44 +1,66 @@
 @keyframes item-fade-in {
   to {
-	opacity: 1;
-	transform: translateX(0px);
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
 
 @keyframes glitch {
   0% {
-	text-shadow:
-	  0.0125em 0.025em 0 rgba(239, 239, 239, 0.75),
-	  0.05em 0.025em 0 rgba(170, 68, 68, 0.8);
+    text-shadow:
+      0.0125em 0.025em 0 rgba(239, 239, 239, 0.75),
+      0.05em 0.025em 0 rgba(170, 68, 68, 0.8);
   }
   14% {
-	text-shadow:
-	  0.0125em 0.025em 0 rgba(239, 239, 239, 0.75),
-	  0.05em 0.025em 0 rgba(170, 68, 68, 0.8);
+    text-shadow:
+      0.0125em 0.025em 0 rgba(239, 239, 239, 0.75),
+      0.05em 0.025em 0 rgba(170, 68, 68, 0.8);
   }
   15% {
-	text-shadow:
-	  -0.0125em 0.025em 0 rgba(239, 239, 239, 0.75),
-	  -0.05em 0.025em 0 rgba(170, 68, 68, 0.8);
+    text-shadow:
+      -0.0125em 0.025em 0 rgba(239, 239, 239, 0.75),
+      -0.05em 0.025em 0 rgba(170, 68, 68, 0.8);
   }
   49% {
-	text-shadow:
-	  -0.0125em 0.025em 0 rgba(239, 239, 239, 0.75),
-	  -0.05em 0.025em 0 rgba(170, 68, 68, 0.8);
+    text-shadow:
+      -0.0125em 0.025em 0 rgba(239, 239, 239, 0.75),
+      -0.05em 0.025em 0 rgba(170, 68, 68, 0.8);
   }
   50% {
-	text-shadow:
-	  0.015em 0.015em 0 rgba(239, 239, 239, 0.75),
-	  0.0125em 0.0125em 0 rgba(170, 68, 68, 0.75);
+    text-shadow:
+      0.015em 0.015em 0 rgba(239, 239, 239, 0.75),
+      0.0125em 0.0125em 0 rgba(170, 68, 68, 0.75);
   }
   99% {
-	text-shadow:
-	  -0.015em -0.025em 0 rgba(239, 239, 239, 0.75),
-	  -0.025em 0.0125em 0 rgba(170, 68, 68, 0.75);
+    text-shadow:
+      -0.015em -0.025em 0 rgba(239, 239, 239, 0.75),
+      -0.025em 0.0125em 0 rgba(170, 68, 68, 0.75);
   }
   100% {
-	text-shadow:
-	  0.025em 0.025em 0 rgba(239, 239, 239, 0.75),
-	  -0.025em 0 0 rgba(170, 68, 68, 0.75);
+    text-shadow:
+      0.025em 0.025em 0 rgba(239, 239, 239, 0.75),
+      -0.025em 0 0 rgba(170, 68, 68, 0.75);
+  }
+}
+
+@keyframes origin {
+  0% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes origin-scale {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
