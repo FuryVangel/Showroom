@@ -145,7 +145,7 @@
             </div>
           </div>
         </section>
-        <section class="primary-content">
+        <section id="primary-content" class="primary-content">
           <div class="primary-content__container">
             <div class="primary-content__grid grid">
               <div class="grid__item grid__item-1 grid__row"></div>
@@ -328,6 +328,16 @@
     </div>
     <script src="js/libs/jquery-3.5.1.min.js"></script>
     <script src="js/libs/progressive-image.js"></script>
+    <script>
+      (function(){
+        new Progressive({
+          el: '#primary-content',
+          lazyClass: 'lazy',
+          removePreview: true,
+          scale: true
+        }).fire()
+      })()
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>
