@@ -1,21 +1,21 @@
 :root {
-  --color-background: #dedfe5;
-  --color-base-layer: #bbc2d4;
-  --color-placeholder: var(--color-base-layer);
-  --color-primary: #2c2021;
-  --color-secondary: #ffffff;
-  --color-redtail: #aa4444;
-  --color-orange: #dd7d41;
-  --color-crystalBell: #efefef;
+   --color-background: #dedfe5;
+   --color-base-layer: #bbc2d4;
+   --color-placeholder: var(--color-base-layer);
+   --color-primary: #2c2021;
+   --color-secondary: #ffffff;
+   --color-redtail: #aa4444;
+   --color-orange: #dd7d41;
+   --color-crystalBell: #efefef;
 
-  --lightShadow: #6f6f6f;
-  --shadow: #3f3f3f;
-  --darkShadow: #0f0f0f;
+   --lightShadow: #6f6f6f;
+   --shadow: #3f3f3f;
+   --darkShadow: #0f0f0f;
 
-  --border: 1.5px solid;
+   --border: 1.5px solid;
 
-  --transition: .3s ease;
-}
+   --transition: .3s ease;
+ }
 
 ::selection {
   color: var(--color-crystalBell);
@@ -69,12 +69,10 @@ a {
   }
 
   &:-moz-focusring {
-    color: var(--color-orange);
     outline: var(--color-orange) auto 0.5px;
   }
 
   &:focus-visible {
-    color: var(--color-orange);
     outline: var(--color-orange) auto 0.5px;
   }
 
@@ -218,7 +216,7 @@ svg {
     border-bottom: 1px solid var(--color-orange);
   }
 
-  @include tablet {
+  @include mobile {
     &:hover,
     &:focus {
       color: var(--color-primary);
