@@ -1,0 +1,48 @@
+.catalog {
+  padding: 2em 0 3em;
+  overflow: hidden;
+
+  @include tablet {
+    padding: 0 0 3em;
+  }
+
+  &__content {
+    @include flex_column;
+    align-items: center;
+  }
+
+  &__title {
+    @include flex_column-center;
+    padding-bottom: 2em;
+
+    h1, p {
+      @include list-reset;
+      line-height: 182.9%;
+      color: inherit;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      padding-bottom: 0.5em;
+
+      @include mobile {
+        font-size: 1.5em;
+        padding-bottom: 0.6em;
+      }
+    }
+
+    p {
+      font-family: $montserrat;
+      font-weight: 300;
+      font-size: .92rem;
+      max-width: 500px;
+      text-align: center;
+    }
+  }
+
+  &__container {
+    @include flex_column;
+    width: 100%;
+  }
+}

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Шоурум QWK.</title>
+  <meta name="developer" content="Ангелина Игнатенко | https://github.com/FuryVangel">
+  <meta name="title" content="Шоурум QWK.»">
+  <meta name="description" content="Шоурум QWK. — представляет собственные и локальные эксклюзивные лимитированные коллекции, a также коллаборации с модными дизайнерами.">
+  <meta name="keywords" content="шоурумы Спб, модные шоурумы питера, локальные бренды Спб"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#dd7d41">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="QWK.">
+  <meta name="application-name" content="QWK.">
+  <meta name="msapplication-TileColor" content="#6f6f6f">
+  <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#6f6f6f">
+
+  <link rel="preload" href="fonts/MontserratLight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/MontserratRegular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/MontserratMedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/PoliticaLight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RalewayRegular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div style="display: none;">
+  <include src="build/img/icons/sprite.svg"></include>
+</div>
+<div class="page-wrapper">
+  <header class="page-header page-header--inner">
+    <nav class="page-header__nav container">
+      <div class="page-header__btn page-header__btn--trigger js-btn-trigger" role="button" aria-label="Открыть мобильное меню навигации">
+        <span></span>
+      </div>
+      <a href="index.html" class="page-header__logo" tabindex="0" aria-label="Логотип шоурума QWK.">
+        <svg width="62" height="19" viewBox="0 0 62 19">
+          <use xlink:href="#icon-logo"></use>
+        </svg>
+      </a>
+      <div class="page-header__menu">
+        <div class="page-header__group js-menu">
+          <div class="page-header__row">
+            <button class="page-header__btn page-header__btn--close js-btn-close" aria-label="Закрыть мобильное меню навигации">
+              <svg width="18" height="18" viewBox="0 0 512.001 512.001">
+                <use xlink:href="#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="page-header__form" action="#" method="get">
+            <div>
+              <label class="visually-hidden" for="search">Искать</label>
+              <input id="search" type="search" name="search" autocomplete="off" autocapitalize="on" placeholder="Искать" aria-label="Искать информацию по сайту">
+              <button type="submit" aria-label="Поиск">
+                <svg class="nav-icon" width="23" height="23" viewBox="0 0 451 451">
+                  <use xlink:href="#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+          <div class="page-header__links">
+            <ul>
+              <li class="sub-menu js-sub-menu">
+                <a class="link" href="#" aria-label="Мужская коллекция">Мужчины<span class="toggle-icon" aria-hidden="true"></span></a>
+                <ul>
+                  <li><a class="link" href="#" aria-label="Толстовки и свитшоты">Толстовки и свитшоты</a></li>
+                  <li><a class="link" href="#" aria-label="Джинсы">Джинсы</a></li>
+                  <li><a class="link" href="#" aria-label="Аксессуары">Аксессуары</a></li>
+                </ul>
+              </li>
+              <li class="sub-menu js-sub-menu">
+                <a class="link" href="#" aria-label="Женская коллекция">Женщины<span class="toggle-icon" aria-hidden="true"></span></a>
+                <ul>
+                  <li><a class="link" href="#" aria-label="Толстовки и свитшоты">Толстовки и свитшоты</a></li>
+                  <li><a class="link" href="#" aria-label="Джинсы">Джинсы</a></li>
+                  <li><a class="link" href="#" aria-label="Аксессуары">Аксессуары</a></li>
+                </ul>
+              </li>
+              <li><a class="link" href="#" aria-label="Избранное">Избранное</a></li>
+              <li><a class="link" href="#" aria-label="Контакты">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="overlay js-overlay"></div>
+        <div class="page-header__icons">
+          <ul>
+            <li>
+              <a href="#" aria-label="Поиск">
+                <svg class="icon icon--search" width="25" height="25" viewBox="0 0 451 451">
+                  <use xlink:href="#icon-search"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Войти">
+                <svg class="icon" width="25" height="25" viewBox="0 0 482.9 482.9">
+                  <use xlink:href="#icon-avatar"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Избранное">
+                <svg class="icon" width="25" height="25" viewBox="0 -28 512.001 512">
+                  <use xlink:href="#icon-heart"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Корзина покупок">
+                <svg class="icon" width="25" height="25" viewBox="0 0 489 489">
+                  <use xlink:href="#icon-shopping-bag"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="breadcrumb">
+      <nav class="breadcrumbs container">
+        <ul class="breadcrumbs__list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+            <a href="index.html" itemprop="item">
+              <span itemprop="name">QWK.</span>
+            </a>
+          </li>
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+            <a href="index.html" itemprop="item">
+              <span itemprop="name">Мужчины</span>
+            </a>
+          </li>
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+            <a href="index.html" itemprop="item" data-no-click="true">
+              <span itemprop="name">Толстовки и свитшоты</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <section class="catalog">
+      <div class="catalog__content container">
+        <div class="catalog__title">
+          <h1>Тостовки и свитшоты</h1>
+          <p>Оригинальные свитшоты с&nbsp;ярким акцентом на&nbsp;принты
+            и&nbsp;тематикой 90-х&nbsp;идеально подойдут для&nbsp;создания непринужденного образа в&nbsp;стиле casual
+          </p>
+        </div>
+        <div class="catalog__container">
+          <div class="catalog__filter catalog-filter">
+            <p>Упорядочить</p>
+            <div class="catalog-filter__buttons">
+              <button id="large-size" class="catalog-filter__button js-filter-button"></button>
+              <button id="small-size" class="catalog-filter__button active js-filter-button"></button>
+            </div>
+          </div>
+          <div class="catalog__products products">
+            <ul class="products__list small-size js-list">
+              <li class="products__item">
+                <article>
+                  <div class="products__image-container">
+                    <a class="products__item-link" href="#" aria-label="Свитшот с принтом NEVER STOP DREAMING">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/catalog/sweatshirt-with-print-8@1x.webp 1x, img/content/catalog/sweatshirt-with-print-8@2x.webp 2x">
+                        <img src="img/content/catalog/sweatshirt-with-print-8@1x.jpg" srcset="img/content/catalog/sweatshirt-with-print-8@2x.jpg 2x" width="767" height="959" alt="Свитшот с принтом NEVER STOP DREAMING">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="products__item-details">
+                    <h3 class="products__item-heading">
+                      <a href="#" aria-label="Свитшот с принтом NEVER STOP DREAMING">
+                        <span>Свитшот с&nbsp;принтом</span>
+                        <span>NEVER stop DREAMING</span>
+                      </a>
+                    </h3>
+                    <strong class="products__item-price">
+                      <span class="price">7&nbsp;490 руб.</span>
+                    </strong>
+                    <div class="products__item-button">
+                      <button type="button" aria-label="Сохранить как избранное"></button>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="products__item">
+                <article>
+                  <div class="products__image-container">
+                    <a class="products__item-link" href="#" aria-label="Свитшот с принтом HAWAII">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/catalog/sweatshirt-with-print@1x.webp 1x, img/content/catalog/sweatshirt-with-print@2x.webp 2x">
+                        <img src="img/content/catalog/sweatshirt-with-print@1x.jpg" srcset="img/content/catalog/sweatshirt-with-print@2x.jpg 2x" width="765" height="958" alt="Свитшот с принтом HAWAII">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="products__item-details">
+                    <h3 class="products__item-heading">
+                      <a href="#" aria-label="Свитшот с принтом HAWAII">
+                        <span>Свитшот с&nbsp;принтом</span>
+                        <span>HAWAII</span>
+                      </a>
+                    </h3>
+                    <strong class="products__item-price">
+                      <span class="price">10&nbsp;999 руб.</span>
+                    </strong>
+                    <div class="products__item-button">
+                      <button type="button" aria-label="Сохранить как избранное"></button>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="products__item">
+                <article>
+                  <div class="products__image-container">
+                    <a class="products__item-link" href="#" aria-label="Свитшот с принтом PANINI">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/catalog/sweatshirt-with-print-1@1x.webp 1x, img/content/catalog/sweatshirt-with-print-1@2x.webp 2x">
+                        <img src="img/content/catalog/sweatshirt-with-print-1@1x.jpg" srcset="img/content/catalog/sweatshirt-with-print-1@2x.jpg 2x" width="765" height="958" alt="Свитшот с принтом PANINI">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="products__item-details">
+                    <h3 class="products__item-heading">
+                      <a href="#" aria-label="Свитшот с принтом PANINI">
+                        <span>Свитшот с&nbsp;принтом</span>
+                        <span>PANINI</span>
+                      </a>
+                    </h3>
+                    <strong class="products__item-price">
+                      <span class="price">7&nbsp;490 руб.</span>
+                    </strong>
+                    <div class="products__item-button">
+                      <button type="button" aria-label="Сохранить как избранное"></button>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="products__item">
+                <article>
+                  <div class="products__image-container">
+                    <a class="products__item-link" href="#" aria-label="Свитшот с принтом SINCE EVER FOREVER">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/catalog/sweatshirt-with-print-2@1x.webp 1x, img/content/catalog/sweatshirt-with-print-2@2x.webp 2x">
+                        <img src="img/content/catalog/sweatshirt-with-print-2@1x.jpg" srcset="img/content/catalog/sweatshirt-with-print-2@2x.jpg 2x" width="765" height="958" alt="Свитшот с принтом SINCE EVER FOREVER">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="products__item-details">
+                    <h3 class="products__item-heading">
+                      <a href="#" aria-label="Свитшот с принтом SINCE EVER FOREVER">
+                        <span>Свитшот с&nbsp;принтом</span>
+                        <span>SINCE EVER FOREVER</span>
+                      </a>
+                    </h3>
+                    <strong class="products__item-price">
+                      <span class="price">7&nbsp;490 руб.</span>
+                    </strong>
+                    <div class="products__item-button">
+                      <button type="button" aria-label="Сохранить как избранное"></button>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="products__item">
+                <article>
+                  <div class="products__image-container">
+                    <a class="products__item-link" href="#" aria-label="Свитшот с принтом Eat and Sleep">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/catalog/sweatshirt-with-print-3@1x.webp 1x, img/content/catalog/sweatshirt-with-print-3@2x.webp 2x">
+                        <img src="img/content/catalog/sweatshirt-with-print-3@1x.jpg" srcset="img/content/catalog/sweatshirt-with-print-3@2x.jpg 2x" width="765" height="958" alt="Свитшот с принтом Eat and Sleep">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="products__item-details">
+                    <h3 class="products__item-heading">
+                      <a href="#" aria-label="Свитшот с принтом Eat and Sleep">
+                        <span>Свитшот с&nbsp;принтом</span>
+                        <span>Eat and Sleep</span>
+                      </a>
+                    </h3>
+                    <strong class="products__item-price">
+                      <span class="price">10&nbsp;999 руб.</span>
+                    </strong>
+                    <div class="products__item-button">
+                      <button type="button" aria-label="Сохранить как избранное"></button>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="products__item">
+                <article>
+                  <div class="products__image-container">
+                    <a class="products__item-link" href="#" aria-label="Свитшот с принтом ATARI">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/catalog/sweatshirt-with-print-4@1x.webp 1x, img/content/catalog/sweatshirt-with-print-4@2x.webp 2x">
+                        <img src="img/content/catalog/sweatshirt-with-print-4@1x.jpg" srcset="img/content/catalog/sweatshirt-with-print-4@2x.jpg 2x" width="767" height="959" alt="Свитшот с принтом ATARI">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="products__item-details">
+                    <h3 class="products__item-heading">
+                      <a href="#" aria-label="Свитшот с принтом ATARI">
+                        <span>Свитшот с&nbsp;принтом</span>
+                        <span>ATARI</span>
+                      </a>
+                    </h3>
+                    <strong class="products__item-price">
+                      <span class="price">10&nbsp;999 руб.</span>
+                    </strong>
+                    <div class="products__item-button">
+                      <button type="button" aria-label="Сохранить как избранное"></button>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="products__item">
+                <article>
+                  <div class="products__image-container">
+                    <a class="products__item-link" href="#" aria-label="Свитшот с принтом SUPER MARIO">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/catalog/sweatshirt-with-print-5@1x.webp 1x, img/content/catalog/sweatshirt-with-print-5@2x.webp 2x">
+                        <img src="img/content/catalog/sweatshirt-with-print-5@1x.jpg" srcset="img/content/catalog/sweatshirt-with-print-5@2x.jpg 2x" width="767" height="959" alt="Свитшот с принтом SUPER MARIO">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="products__item-details">
+                    <h3 class="products__item-heading">
+                      <a href="#" aria-label="Свитшот с принтом SUPER MARIO">
+                        <span>Свитшот с&nbsp;принтом</span>
+                        <span>SUPER MARIO</span>
+                      </a>
+                    </h3>
+                    <strong class="products__item-price">
+                      <span class="price">8&nbsp;490 руб.</span>
+                    </strong>
+                    <div class="products__item-button">
+                      <button type="button" aria-label="Сохранить как избранное"></button>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="products__item">
+                <article>
+                  <div class="products__image-container">
+                    <a class="products__item-link" href="#" aria-label="Свитшот с принтом DETROIT">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/catalog/sweatshirt-with-print-6@1x.webp 1x, img/content/catalog/sweatshirt-with-print-6@2x.webp 2x">
+                        <img src="img/content/catalog/sweatshirt-with-print-6@1x.jpg" srcset="img/content/catalog/sweatshirt-with-print-6@2x.jpg 2x" width="767" height="959" alt="Свитшот с принтом DETROIT">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="products__item-details">
+                    <h3 class="products__item-heading">
+                      <a href="#" aria-label="Свитшот с принтом DETROIT">
+                        <span>Свитшот с&nbsp;принтом</span>
+                        <span>DETROIT</span>
+                      </a>
+                    </h3>
+                    <strong class="products__item-price">
+                      <span class="price">5&nbsp;990 руб.</span>
+                    </strong>
+                    <div class="products__item-button">
+                      <button type="button" aria-label="Сохранить как избранное"></button>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="products__item">
+                <article>
+                  <div class="products__image-container">
+                    <a class="products__item-link" href="#" aria-label="Свитшот с принтом STAR WARS">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/catalog/sweatshirt-with-print-7@1x.webp 1x, img/content/catalog/sweatshirt-with-print-7@2x.webp 2x">
+                        <img src="img/content/catalog/sweatshirt-with-print-7@1x.jpg" srcset="img/content/catalog/sweatshirt-with-print-7@2x.jpg 2x" width="767" height="959" alt="Свитшот с принтом STAR WARS">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="products__item-details">
+                    <h3 class="products__item-heading">
+                      <a href="#" aria-label="Свитшот с принтом STAR WARS">
+                        <span>Свитшот с&nbsp;принтом</span>
+                        <span>STAR WARS</span>
+                      </a>
+                    </h3>
+                    <strong class="products__item-price">
+                      <span class="price">6&nbsp;490 руб.</span>
+                    </strong>
+                    <div class="products__item-button">
+                      <button type="button" aria-label="Сохранить как избранное"></button>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="products__item">
+                <article>
+                  <div class="products__image-container">
+                    <a class="products__item-link" href="#" aria-label="Свитшот с принтом Love Me">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/catalog/sweatshirt-with-print-9@1x.webp 1x, img/content/catalog/sweatshirt-with-print-9@2x.webp 2x">
+                        <img src="img/content/catalog/sweatshirt-with-print-9@1x.jpg" srcset="img/content/catalog/sweatshirt-with-print-9@2x.jpg 2x" width="767" height="959" alt="Свитшот с принтом Love Me">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="products__item-details">
+                    <h3 class="products__item-heading">
+                      <a href="#" aria-label="Свитшот с принтом Love Me">
+                        <span>Свитшот с&nbsp;принтом</span>
+                        <span>Love Me</span>
+                      </a>
+                    </h3>
+                    <strong class="products__item-price">
+                      <span class="price">10&nbsp;999 руб.</span>
+                    </strong>
+                    <div class="products__item-button">
+                      <button type="button" aria-label="Сохранить как избранное"></button>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="products__item">
+                <article>
+                  <div class="products__image-container">
+                    <a class="products__item-link" href="#" aria-label="Свитшот с принтом NYC">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/catalog/sweatshirt-with-print-11@1x.webp 1x, img/content/catalog/sweatshirt-with-print-11@2x.webp 2x">
+                        <img src="img/content/catalog/sweatshirt-with-print-11@1x.jpg" srcset="img/content/catalog/sweatshirt-with-print-11@2x.jpg 2x" width="767" height="959" alt="Свитшот с принтом NYC">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="products__item-details">
+                    <h3 class="products__item-heading">
+                      <a href="#" aria-label="Свитшот с принтом NYC">
+                        <span>Свитшот с&nbsp;принтом</span>
+                        <span>NYC</span>
+                      </a>
+                    </h3>
+                    <strong class="products__item-price">
+                      <span class="price">7&nbsp;490 руб.</span>
+                    </strong>
+                    <div class="products__item-button">
+                      <button type="button" aria-label="Сохранить как избранное"></button>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="products__item">
+                <article>
+                  <div class="products__image-container">
+                    <a class="products__item-link" href="#" aria-label="Свитшот с принтом NIRVANA">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/catalog/sweatshirt-with-print-12@1x.webp 1x, img/content/catalog/sweatshirt-with-print-12@2x.webp 2x">
+                        <img src="img/content/catalog/sweatshirt-with-print-12@1x.jpg" srcset="img/content/catalog/sweatshirt-with-print-12@2x.jpg 2x" width="767" height="959" alt="Свитшот с принтом NIRVANA">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="products__item-details">
+                    <h3 class="products__item-heading">
+                      <a href="#" aria-label="Свитшот с принтом NIRVANA">
+                        <span>Свитшот с&nbsp;принтом</span>
+                        <span>NIRVANA</span>
+                      </a>
+                    </h3>
+                    <strong class="products__item-price">
+                      <span class="price">10&nbsp;999 руб.</span>
+                    </strong>
+                    <div class="products__item-button">
+                      <button type="button" aria-label="Сохранить как избранное"></button>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="products__item">
+                <article>
+                  <div class="products__image-container">
+                    <a class="products__item-link" href="#" aria-label="Свитшот с принтом IRON MAIDEN">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/catalog/sweatshirt-with-print-10@1x.webp 1x, img/content/catalog/sweatshirt-with-print-10@2x.webp 2x">
+                        <img src="img/content/catalog/sweatshirt-with-print-10@1x.jpg" srcset="img/content/catalog/sweatshirt-with-print-10@2x.jpg 2x" width="767" height="959" alt="Свитшот с принтом IRON MAIDEN">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="products__item-details">
+                    <h3 class="products__item-heading">
+                      <a href="#" aria-label="Свитшот с принтом IRON MAIDEN">
+                        <span>Свитшот с&nbsp;принтом</span>
+                        <span>IRON MAIDEN</span>
+                      </a>
+                    </h3>
+                    <strong class="products__item-price">
+                      <span class="price">7&nbsp;490 руб.</span>
+                    </strong>
+                    <div class="products__item-button">
+                      <button type="button" aria-label="Сохранить как избранное"></button>
+                    </div>
+                  </div>
+                </article>
+              </li>
+            </ul>
+            <div class="products__button">
+              <button class="btn btn--orange js-load-more-button" type="button">Загрузить еще</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="subscribe">
+      <div class="subscribe__content container">
+        <form class="subscribe__form" action="#" method="post">
+          <h2>Присоединяйся к&nbsp;нам</h2>
+          <p>Подпишись на&nbsp;рассылку новостей, чтобы&nbsp;быть
+            в&nbsp;курсе последних поступлений и&nbsp;событий,
+            и&nbsp;получи&nbsp;скидку 10%
+          </p>
+          <div>
+            <label class="visually-hidden" for="email">Подписаться</label>
+            <input id="email" type="email" name="email" placeholder="email" required="">
+          </div>
+          <button class="subscribe__button btn btn--orange" type="submit">Подписаться</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__content container">
+      <div class="page-footer__group" role="navigation" aria-label="Меню навигации футера">
+        <div class="page-footer__item page-footer__item--contacts">
+          <a class="page-footer__logo" aria-label="Логотип шоурума QWK.">
+            <svg width="62" height="19" viewBox="0 0 62 19">
+              <use xlink:href="#icon-logo"></use>
+            </svg>
+          </a>
+          <div class="page-footer__contacts">
+            <p>Санкт-Петербург, Невский пр-т, д.91
+              Открыты ежедневно с 12−22 часов
+            </p>
+            <a class="link" href="tel:+78129117325">+7 (812) 911 73 25</a>
+            <a class="link" href="mailto:shop@qwk.com">shop@qwk.com</a>
+          </div>
+          <div class="page-footer__social-links">
+            <p><span class="visually-hidden">Мы в соц сетях</span></p>
+            <ul>
+              <li>
+                <a href="#" aria-label="Наш Инстаграм">
+                  <svg width="28" height="28" viewBox="0 0 512 512">
+                    <use xlink:href="#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Наш Твиттер">
+                  <svg width="28" height="28" viewBox="0 0 512 512">
+                    <use xlink:href="#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Наш Фейсбук">
+                  <svg width="28" height="28" viewBox="0 0 512 512">
+                    <use xlink:href="#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Наш Ватсап">
+                  <svg width="28" height="28" viewBox="0 0 28 28">
+                    <use xlink:href="#icon-whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="page-footer__item">
+          <h3 class="page-footer__header js-footer-header">О проекте<span class="toggle-icon" aria-hidden="true"></span></h3>
+          <ul class="page-footer__list js-footer-list">
+            <li><a class="link" href="#" aria-label="Новости">Новости</a></li>
+            <li><a class="link" href="#" aria-label="Вакансии">Вакансии</a></li>
+            <li><a class="link" href="#" aria-label="Контакты">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="page-footer__item">
+          <h3 class="page-footer__header js-footer-header">Помощь покупателю<span class="toggle-icon" aria-hidden="true"></span></h3>
+          <ul class="page-footer__list js-footer-list">
+            <li><a class="link" href="#" aria-label="Оплата и доставка">Оплата и доставка</a></li>
+            <li><a class="link" href="#" aria-label="Обмен и возврат">Обмен и возврат</a></li>
+            <li><a class="link" href="#" aria-label="Программа лояльности">Программа лояльности</a></li>
+          </ul>
+          <div class="page-footer__pay-links">
+            <p>Мы принимаем</p>
+            <ul>
+              <li>
+                <a href="#" aria-label="Карта Вестерн Юнион">
+                  <img src="img/icons/western-union.png" width="204" height="128" alt="Карта Вестерн Юнион">
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Карта Маэстро">
+                  <img src="img/icons/maestro.png" width="203" height="128" alt="Карта Маэстро">
+                </a>
+              </li>
+              <li>
+                <a class="icon-pay-links" href="#" aria-label="Карта Мастер Кард">
+                  <img src="img/icons/mastercard.png" width="204" height="128" alt="Карта Мастер Кард">
+                </a>
+              </li>
+              <li>
+                <a class="icon-pay-links" href="#" aria-label="Карта Виза">
+                  <img src="img/icons/visa.png" width="203" height="128" alt="Карта Виза">
+                </a>
+              </li>
+              <li>
+                <a class="icon-pay-links" href="#" aria-label="Карта Пейпал">
+                  <img src="img/icons/paypal.png" width="202" height="128" alt="Карта Пейпал">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <ul class="page-footer__copyright">
+        <li>© QWK, 2019−2021</li>
+        <li><a class="link" href="#" aria-label="Политика конфиденциальности">Политика конфиденциальности</a></li>
+        <li><a class="link" href="#" aria-label="Условия продажи">Условия продажи</a></li>
+        <li>Developed by<a class="link" href="https://github.com/FuryVangel">FuryVangel</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+<script src="js/libs/jquery-3.5.1.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
