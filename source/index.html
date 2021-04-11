@@ -39,7 +39,7 @@
           <div class="page-header__btn page-header__btn--trigger js-btn-trigger" role="button" aria-label="Открыть мобильное меню навигации">
             <span></span>
           </div>
-          <a class="page-header__logo" tabindex="0" aria-label="Логотип шоурума QWK.">
+          <a class="page-header__logo" data-no-click="true" tabindex="0" aria-label="Логотип шоурума QWK.">
             <svg width="62" height="19" viewBox="0 0 62 19">
               <use xlink:href="#icon-logo"></use>
             </svg>
@@ -67,7 +67,7 @@
               <div class="page-header__links">
                 <ul>
                   <li class="sub-menu js-sub-menu">
-                    <a class="link" href="#" aria-label="Мужская коллекция">Мужчины<span class="toggle-icon" aria-hidden="true"></span></a>
+                    <a class="link" href="catalog.html" aria-label="Мужская коллекция">Мужчины<span class="toggle-icon" aria-hidden="true"></span></a>
                     <ul>
                       <li><a class="link" href="catalog.html" aria-label="Толстовки и свитшоты">Толстовки и свитшоты</a></li>
                       <li><a class="link" href="#" aria-label="Джинсы">Джинсы</a></li>
@@ -139,7 +139,7 @@
                 </p>
               </div>
               <div class="hero__buttons">
-                <a class="hero__btn btn" href="#" aria-label="Смотреть мужскую коллекцию">Мужчины</a>
+                <a class="hero__btn btn" href="catalog.html" aria-label="Смотреть мужскую коллекцию">Мужчины</a>
                 <a class="hero__btn btn" href="#" aria-label="Смотреть женскую коллекцию">Женщины</a>
               </div>
             </div>
@@ -289,29 +289,44 @@
                 <p>Мы принимаем</p>
                 <ul>
                   <li>
-                    <a href="#" aria-label="Карта Вестерн Юнион">
-                      <img src="img/icons/western-union.png" width="204" height="128" alt="Карта Вестерн Юнион">
-                    </a>
+                    <p>
+                      <picture>
+                        <source type="image/webp" srcset="img/content/western-union@1x.webp 1x, img/content/western-union@2x.webp 2x">
+                        <img src="img/content/western-union@1x.png" srcset="img/content/western-union@2x.png 2x" width="204" height="128" alt="Карта Вестерн Юнион">
+                      </picture>
+                    </p>
                   </li>
                   <li>
-                    <a href="#" aria-label="Карта Маэстро">
-                      <img src="img/icons/maestro.png" width="203" height="128" alt="Карта Маэстро">
-                    </a>
+                    <p>
+                      <picture>
+                        <source type="image/webp" srcset="img/content/maestro@1x.webp 1x, img/content/maestro@2x.webp 2x">
+                        <img src="img/content/maestro@1x.png" srcset="img/content/maestro@2x.png 2x" width="203" height="128" alt="Карта Маэстро">
+                      </picture>
+                    </p>
                   </li>
                   <li>
-                    <a class="icon-pay-links" href="#" aria-label="Карта Мастер Кард">
-                      <img src="img/icons/mastercard.png" width="204" height="128" alt="Карта Мастер Кард">
-                    </a>
+                    <p>
+                      <picture>
+                        <source type="image/webp" srcset="img/content/mastercard@1x.webp 1x, img/content/mastercard@2x.webp 2x">
+                        <img src="img/content/mastercard@1x.png" srcset="img/content/mastercard@2x.png 2x" width="204" height="128" alt="Карта Мастер Кард">
+                      </picture>
+                    </p>
                   </li>
                   <li>
-                    <a class="icon-pay-links" href="#" aria-label="Карта Виза">
-                      <img src="img/icons/visa.png" width="203" height="128" alt="Карта Виза">
-                    </a>
+                    <p>
+                      <picture>
+                        <source type="image/webp" srcset="img/content/visa@1x.webp 1x, img/content/visa@2x.webp 2x">
+                        <img src="img/content/visa@1x.png" srcset="img/content/visa@2x.png 2x" width="203" height="128" alt="Карта Виза">
+                      </picture>
+                    </p>
                   </li>
                   <li>
-                    <a class="icon-pay-links" href="#" aria-label="Карта Пейпал">
-                      <img src="img/icons/paypal.png" width="202" height="128" alt="Карта Пейпал">
-                    </a>
+                    <p>
+                      <picture>
+                        <source type="image/webp" srcset="img/content/paypal@1x.webp 1x, img/content/paypal@2x.webp 2x">
+                        <img src="img/content/paypal@1x.png" srcset="img/content/paypal@2x.png 2x" width="202" height="128" alt="Карта Пейпал">
+                      </picture>
+                    </p>
                   </li>
                 </ul>
               </div>
@@ -328,16 +343,7 @@
     </div>
     <script src="js/libs/jquery-3.5.1.min.js"></script>
     <script src="js/libs/progressive-image.js"></script>
-    <script>
-      (function(){
-        new Progressive({
-          el: '#primary-content',
-          lazyClass: 'lazy',
-          removePreview: true,
-          scale: true
-        }).fire()
-      })()
-    </script>
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
