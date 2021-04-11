@@ -1,6 +1,6 @@
 .breadcrumbs {
   font-family: $montserrat;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.875rem;
   text-align: center;
   color: var(--lightShadow);
@@ -68,15 +68,6 @@
       &:focus {
         color: var(--color-orange);
       }
-
-      span {
-
-      }
-    }
-
-    a[data-no-click="true"] {
-      cursor: default;
-      pointer-events: none;
     }
   }
 }
